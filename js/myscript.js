@@ -7,13 +7,13 @@ console.log(body)
 
 
 function bubbleFall(){
+    document.body.style.overflow = "hidden";
     bubbles = document.createElement("img");
     bubbles.classList.add("eachBubble");
     bubbles.src="imgs/bubble.png";
     body.appendChild(bubbles);
     bubbles.style.left = Math.random() * 100 + "vw";
     bubbles.style.animationDuration = Math.random() * 2.3 + 5 + "s";
-    
 }
 setInterval(bubbleFall, 3000)
 
