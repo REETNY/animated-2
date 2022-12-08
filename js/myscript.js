@@ -2,6 +2,21 @@ let textbox = document.getElementById("name-writer");
 let ham = document.getElementById("ham");
 let navCont = document.getElementById("link-cont");
 let hamIcon = document.getElementById("icon-ham");
+var body = document.getElementsByTagName("body")[0];
+console.log(body)
+
+
+function bubbleFall(){
+    bubbles = document.createElement("img");
+    bubbles.classList.add("eachBubble");
+    bubbles.src="imgs/bubble.png";
+    body.appendChild(bubbles);
+    bubbles.style.left = Math.random() * 100 + "vw";
+    bubbles.style.animationDuration = Math.random() * 2.3 + 5 + "s";
+    
+}
+setInterval(bubbleFall, 3000)
+
 
 ham.addEventListener('click', openNav);
 
